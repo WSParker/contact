@@ -7,7 +7,7 @@
     );
     const IMG_0280 = new URL("./lib/assets/IMG_0280.png", import.meta.url).href;
     let iH, iW;
-    $: contentWidth = Math.min(600, iW);
+    $: contentWidth = Math.min(500, iW);
     $: fontsize = 0.08 * contentWidth;
     // const lowerColor = "#f1e0c5";
     // const headerColor = "#71816d";
