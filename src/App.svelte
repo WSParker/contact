@@ -107,13 +107,13 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
     }
     #myEmail {
         margin-top: 0%;
         margin-bottom: 1%;
-        font-size: calc(0.4 * var(--fontsize));
+        font-size: calc(0.5 * var(--fontsize));
     }
     #myTitle,
     #myOrganization {
@@ -122,18 +122,15 @@
         font-size: calc(0.5 * var(--fontsize));
     }
     #elements {
+        padding-bottom: 2%;
         width: 100%;
         background-color: var(--lowerColor);
-        font-size: calc(0.4 * var(--fontsize));
+        font-size: calc(0.5 * var(--fontsize));
     }
     #myName {
         margin-top: 1%;
         margin-bottom: 1%;
         font-size: var(--fontsize);
-    }
-    #elements {
-        width: 100%;
-        background-color: var(--lowerColor);
     }
     #headshot {
         border: 6px solid white;
@@ -164,9 +161,9 @@
         flex-direction: column;
     }
     #container {
-        padding: 0;
         margin: 0;
         margin-top: calc(var(--contentWidth) * 0.05);
+        padding-bottom: calc(var(--contentWidth) * 0.05);
         display: flex;
         align-items: center;
         justify-content: center;

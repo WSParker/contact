@@ -3,7 +3,10 @@
     export let href;
     export let color;
     export let numPerLine = 1;
-    $: containerWidth = (100 - 3 * (numPerLine + 1)) / numPerLine;
+    $: containerWidth = (100 - 4 * (numPerLine + 1)) / numPerLine;
+
+    // $: containerWidth =
+    // (contentWidth * (1 - 0.05 * (numPerLine + 1))) / numPerLine;
     let container;
     function clickHandler(e) {
         let theLink = document.createElement("a");
@@ -33,7 +36,8 @@
 <style>
     #container {
         text-align: center;
-        margin: 1.5%;
+        margin: 2% 0%;
+        padding: 0;
         border: 1px solid black;
         border-radius: 8px;
         cursor: pointer;
@@ -44,13 +48,11 @@
     }
     #container:hover {
         background-color: hsl(from var(--base-color) h s 90%);
-        /* background-color: #fcfcee; */
         border-color: hsl(from black h s 60%);
     }
     p {
-        /* margin-left: 3%; */
-        margin-top: calc(var(--numPerLine) * 2%);
-        margin-bottom: calc(var(--numPerLine) * 2%);
-        /* margin-bottom: 2%; */
+        margin-left: 0%;
+        margin-top: calc(var(--numPerLine) * 3%);
+        margin-bottom: calc(var(--numPerLine) * 3%);
     }
 </style>
