@@ -9,9 +9,16 @@
     let iH, iW;
     $: contentWidth = Math.min(600, iW);
     $: fontsize = 0.08 * contentWidth;
-    const lowerColor = "#edf2f4";
-    const headerColor = "#2b2d42";
-    const backgroundColor = "#8d99ae";
+    // const lowerColor = "#f1e0c5";
+    // const headerColor = "#71816d";
+    // const backgroundColor = "#c9b79c";
+    const lowerColor = "#ebf5ee";
+    const headerColor = "#283044";
+    const backgroundColor = "#78a1bb";
+    // const lowerColor = "#edf2f4";
+    // const headerColor = "#2b2d42";
+    // const backgroundColor = "#8d99ae";
+    document.body.style.backgroundColor = backgroundColor;
 </script>
 
 <svelte:body
