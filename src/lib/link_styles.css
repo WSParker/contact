@@ -1,0 +1,13 @@
+    .link {
+        border: 1px solid black;
+        cursor: pointer;
+        background-color: var(--base-color);
+        transition:
+            background-color 0.2s,
+            border-color 0.2s;
+    }
+
+    #container:hover {
+        background-color: hsl(from var(--base-color) h s 90%);
+        border-color: hsl(from black h s 60%);
+    }

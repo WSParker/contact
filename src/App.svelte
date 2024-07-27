@@ -1,5 +1,6 @@
 <script>
-    import Element from "./lib/Element.svelte";
+    import Announcement from "./lib/Announcement.svelte";
+    import Link from "./lib/Link.svelte";
     const WParker_CV = new URL("./lib/assets/WParker_CV.pdf", import.meta.url);
     const WParker_Resume = new URL(
         "./lib/assets/WParker_Resume.pdf",
@@ -9,15 +10,9 @@
     let iH, iW;
     $: contentWidth = Math.min(500, iW);
     $: fontsize = 0.08 * contentWidth;
-    // const lowerColor = "#f1e0c5";
-    // const headerColor = "#71816d";
-    // const backgroundColor = "#c9b79c";
     const lowerColor = "#ebf5ee";
     const headerColor = "#283044";
     const backgroundColor = "#78a1bb";
-    // const lowerColor = "#edf2f4";
-    // const headerColor = "#2b2d42";
-    // const backgroundColor = "#8d99ae";
     document.body.style.backgroundColor = backgroundColor;
 </script>
 
@@ -34,7 +29,8 @@
     --lowerColor: {lowerColor}; --contentWidth: {contentWidth}px; 
     --headerColor: {headerColor}; --backgroundColor: {backgroundColor};"
 >
-    <div id="content">
+    <div id="content" style="--base-color: {lowerColor}">
+        <Announcement href="https://www.google.com"></Announcement>
         <div id="header">
             <img
                 id="headshot"
@@ -50,59 +46,46 @@
                 <a href="mailto:wparker@uoregon.edu">wparker4@uoregon.edu</a>
             </p>
         </div>
-        <div id="elements">
-            <div class="element">
-                <Element
-                    contentTitle="Curriculum Vitae"
-                    href={WParker_CV}
-                    color={lowerColor}
-                    numPerLine={2}
-                ></Element>
-                <Element
-                    contentTitle="Resume"
-                    href={WParker_Resume}
-                    color={lowerColor}
-                    numPerLine={2}
-                ></Element>
+        <div id="elements" style="--numPerLine: 1;">
+            <div class="elementRow" style="--numPerLine: 2;">
+                <Link href={WParker_CV}>
+                    <p class="hrefContent">Curriculum Vitae</p>
+                </Link>
+                <Link href={WParker_Resume}>
+                    <p class="hrefContent">Resume</p>
+                </Link>
             </div>
-            <div class="element">
-                <Element
-                    contentTitle="GitHub"
-                    href="https://www.github.com/WSParker"
-                    color={lowerColor}
-                    numPerLine={1}
-                ></Element>
+            <div class="elementRow">
+                <Link href="https://www.github.com/WSParker">
+                    <p class="hrefContent">GitHub</p>
+                </Link>
             </div>
-            <div class="element">
-                <Element
-                    contentTitle="LinkedIn"
-                    href="https://www.linkedin.com/in/will-s-parker"
-                    color={lowerColor}
-                    numPerLine={1}
-                ></Element>
+            <div class="elementRow">
+                <Link href="https://www.linkedin.com/in/will-s-parker">
+                    <p class="hrefContent">LinkedIn</p>
+                </Link>
             </div>
-            <div class="element">
-                <Element
-                    contentTitle="Google Scholar"
+            <div class="elementRow">
+                <Link
                     href="https://scholar.google.com/citations?user=MfSiuHYAAAAJ&hl=en"
-                    color={lowerColor}
-                    numPerLine={1}
-                ></Element>
+                >
+                    <p class="hrefContent">Google Scholar</p>
+                </Link>
             </div>
-            <div class="element">
-                <Element
-                    contentTitle="ORCiD"
-                    href="https://orcid.org/0009-0008-8883-7724"
-                    color={lowerColor}
-                    numPerLine={1}
-                ></Element>
+            <div class="elementRow">
+                <Link href="https://orcid.org/0009-0008-8883-7724">
+                    <p class="hrefContent">ORCiD</p>
+                </Link>
             </div>
         </div>
     </div>
 </div>
 
 <style>
-    .element {
+    .hrefContent {
+        margin: calc(var(--numPerLine) * 3%) 0%;
+    }
+    .elementRow {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -113,19 +96,16 @@
     #myEmail {
         margin-top: 0%;
         margin-bottom: 1%;
-        font-size: calc(0.5 * var(--fontsize));
     }
     #myTitle,
     #myOrganization {
         margin-top: 0;
         margin-bottom: 1%;
-        font-size: calc(0.5 * var(--fontsize));
     }
     #elements {
         padding-bottom: 2%;
         width: 100%;
         background-color: var(--lowerColor);
-        font-size: calc(0.5 * var(--fontsize));
     }
     #myName {
         margin-top: 1%;
@@ -159,8 +139,10 @@
         width: calc(var(--contentWidth) * 0.9);
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     #container {
+        font-size: calc(0.5 * var(--fontsize));
         margin: 0;
         margin-top: calc(var(--contentWidth) * 0.05);
         padding-bottom: calc(var(--contentWidth) * 0.05);
