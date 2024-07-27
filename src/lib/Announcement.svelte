@@ -15,7 +15,7 @@
     id="container"
     class="link"
 >
-    <p>M&M<br />2024<br />arXiv</p>
+    <slot></slot>
 </div>
 
 <style>
@@ -31,6 +31,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(100, 150, 100);
+        background-color: var(--backgroundColor);
+        /* font-size: calc(0.4 * var(--fontsize)); */
+        /* color: white;
+        background-color: #b31b1b; */
     }
 </style>

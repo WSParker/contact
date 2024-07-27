@@ -30,7 +30,9 @@
     --headerColor: {headerColor}; --backgroundColor: {backgroundColor};"
 >
     <div id="content" style="--base-color: {lowerColor}">
-        <Announcement href="https://www.google.com"></Announcement>
+        <!-- <Announcement href="https://www.google.com">
+            <p>M&M<br />2024<br />arXiv</p>
+        </Announcement> -->
         <div id="header">
             <img
                 id="headshot"
