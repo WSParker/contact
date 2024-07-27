@@ -6,7 +6,8 @@
         "./lib/assets/WParker_Resume.pdf",
         import.meta.url,
     );
-    const IMG_0280 = new URL("./lib/assets/IMG_0280.png", import.meta.url).href;
+    const IMG_0280 = new URL("./lib/assets/IMG_0280.jpeg", import.meta.url)
+        .href;
     let iH, iW;
     $: contentWidth = Math.min(500, iW);
     $: fontsize = 0.08 * contentWidth;

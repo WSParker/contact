@@ -4,7 +4,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: "/contact/",
+    base: "/",
     plugins: [svelte(), VitePWA({
         workbox: {
             globPatterns: ['**/*.{js,html,css,svg,ico,pdf}']

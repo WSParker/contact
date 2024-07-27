@@ -32,8 +32,5 @@
         justify-content: center;
         align-items: center;
         background-color: var(--backgroundColor);
-        /* font-size: calc(0.4 * var(--fontsize)); */
-        /* color: white;
-        background-color: #b31b1b; */
     }
 </style>
