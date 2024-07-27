@@ -116,6 +116,7 @@
         font-size: var(--fontsize);
     }
     #headshot {
+        background-color: var(--backgroundColor);
         border: 6px solid white;
         border-radius: 50%;
         justify-self: center;
