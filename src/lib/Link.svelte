@@ -1,5 +1,6 @@
 <script>
     export let href;
+    export let width;
     import { clickHandler, keyHandler } from "./link_functions.js";
 </script>
 
@@ -13,6 +14,7 @@
     role="link"
     tabindex="0"
     id="container"
+    style:width
     class="link"
 >
     <slot></slot>
@@ -24,7 +26,6 @@
         margin: 2% 0%;
         padding: 0;
         border-radius: 8px;
-        width: calc((100% - 4% * (var(--numPerLine) + 1)) / var(--numPerLine));
         text-align: center;
     }
 </style>

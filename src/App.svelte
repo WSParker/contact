@@ -10,8 +10,8 @@
         .href;
     let iH, iW;
     $: contentWidth = Math.min(500, iW);
-    // $: fontsize = 0.08 * contentWidth;
-    // $: elementFontsize = 0.04 * contentWidth;
+    let linkWidth1 = 92; // (100 - 4 * (numPerLine + 1)) / numPerLine
+    let linkWidth2 = 44;
     const lowerColor = "#ebf5ee";
     const headerColor = "#283044";
     const backgroundColor = "#78a1bb";
@@ -23,12 +23,9 @@
     bind:clientWidth={iW}
     id="container"
     style="--lowerColor: {lowerColor}; --contentWidth: {contentWidth}px; 
-    --headerColor: {headerColor}; --backgroundColor: {backgroundColor};"
+    --headerColor: {headerColor}; --backgroundColor: {backgroundColor}; --numPerLine: 1;"
 >
     <div id="content" style="--base-color: {lowerColor}">
-        <!-- <Announcement href="https://www.google.com">
-            <p>M&M<br />2024<br />arXiv</p>
-        </Announcement> -->
         <div id="header">
             <img
                 id="headshot"
@@ -43,35 +40,43 @@
             <p id="myEmail">
                 <a href="mailto:wparker@uoregon.edu">wparker4@uoregon.edu</a>
             </p>
-        </div>
-        <div id="elements" style="--numPerLine: 1;">
             <div class="elementRow" style="--numPerLine: 2;">
-                <Link href={WParker_CV}>
+                <Link href={WParker_CV} width="{linkWidth2}%">
                     <p class="hrefContent">Curriculum Vitae</p>
                 </Link>
-                <Link href={WParker_Resume}>
+                <Link href={WParker_Resume} width="{linkWidth2}%">
                     <p class="hrefContent">Resume</p>
                 </Link>
             </div>
             <div class="elementRow">
-                <Link href="https://www.github.com/WSParker">
+                <Link
+                    href="https://www.github.com/WSParker"
+                    width="{linkWidth1}%"
+                >
                     <p class="hrefContent">GitHub</p>
                 </Link>
             </div>
             <div class="elementRow">
-                <Link href="https://www.linkedin.com/in/will-s-parker">
+                <Link
+                    href="https://www.linkedin.com/in/will-s-parker"
+                    width="{linkWidth1}%"
+                >
                     <p class="hrefContent">LinkedIn</p>
                 </Link>
             </div>
             <div class="elementRow">
                 <Link
                     href="https://scholar.google.com/citations?user=MfSiuHYAAAAJ&hl=en"
+                    width="{linkWidth1}%"
                 >
                     <p class="hrefContent">Google Scholar</p>
                 </Link>
             </div>
             <div class="elementRow">
-                <Link href="https://orcid.org/0009-0008-8883-7724">
+                <Link
+                    href="https://orcid.org/0009-0008-8883-7724"
+                    width="{linkWidth1}%"
+                >
                     <p class="hrefContent">ORCiD</p>
                 </Link>
             </div>
@@ -82,7 +87,7 @@
 <style>
     .hrefContent {
         margin: calc(var(--numPerLine) * 3%) 0%;
-        font-size: 0.5em;
+        font-size: 0.5rem;
     }
     .elementRow {
         width: 100%;
@@ -95,23 +100,18 @@
     #myEmail {
         margin-top: 0%;
         margin-bottom: 1%;
-        font-size: 0.5em;
+        font-size: 0.5rem;
     }
     #myTitle,
     #myOrganization {
         margin-top: 0;
         margin-bottom: 1%;
-        font-size: 0.5em;
-    }
-    #elements {
-        padding-bottom: 2%;
-        width: 100%;
-        background-color: var(--lowerColor);
+        font-size: 0.5rem;
     }
     #myName {
         margin-top: 1%;
         margin-bottom: 1%;
-        font-size: 1em;
+        font-size: 1rem;
     }
     #headshot {
         background-color: var(--backgroundColor);
