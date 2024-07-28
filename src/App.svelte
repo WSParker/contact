@@ -86,8 +86,8 @@
 
 <style>
     .hrefContent {
-        margin: calc(var(--numPerLine) * 3%) 0%;
-        font-size: 0.5rem;
+        margin: calc(var(--numPerLine) * 2.5%) 0%;
+        font-size: 0.6rem;
     }
     .elementRow {
         width: 100%;
@@ -99,8 +99,8 @@
     }
     #myEmail {
         margin-top: 0%;
-        margin-bottom: 1%;
-        font-size: 0.5rem;
+        margin-bottom: 1.5%;
+        font-size: 0.6rem;
     }
     #myTitle,
     #myOrganization {
