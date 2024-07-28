@@ -10,24 +10,19 @@
         .href;
     let iH, iW;
     $: contentWidth = Math.min(500, iW);
-    $: fontsize = 0.08 * contentWidth;
+    // $: fontsize = 0.08 * contentWidth;
+    // $: elementFontsize = 0.04 * contentWidth;
     const lowerColor = "#ebf5ee";
     const headerColor = "#283044";
     const backgroundColor = "#78a1bb";
     document.body.style.backgroundColor = backgroundColor;
 </script>
 
-<svelte:body
-    on:click={() => {
-        console.log(iH, iW);
-    }}
-/>
 <div
     bind:clientHeight={iH}
     bind:clientWidth={iW}
     id="container"
-    style="--fontsize: {fontsize}px; 
-    --lowerColor: {lowerColor}; --contentWidth: {contentWidth}px; 
+    style="--lowerColor: {lowerColor}; --contentWidth: {contentWidth}px; 
     --headerColor: {headerColor}; --backgroundColor: {backgroundColor};"
 >
     <div id="content" style="--base-color: {lowerColor}">
@@ -87,6 +82,7 @@
 <style>
     .hrefContent {
         margin: calc(var(--numPerLine) * 3%) 0%;
+        font-size: 0.5em;
     }
     .elementRow {
         width: 100%;
@@ -99,11 +95,13 @@
     #myEmail {
         margin-top: 0%;
         margin-bottom: 1%;
+        font-size: 0.5em;
     }
     #myTitle,
     #myOrganization {
         margin-top: 0;
         margin-bottom: 1%;
+        font-size: 0.5em;
     }
     #elements {
         padding-bottom: 2%;
@@ -113,7 +111,7 @@
     #myName {
         margin-top: 1%;
         margin-bottom: 1%;
-        font-size: var(--fontsize);
+        font-size: 1em;
     }
     #headshot {
         background-color: var(--backgroundColor);
@@ -146,7 +144,6 @@
         position: relative;
     }
     #container {
-        font-size: calc(0.5 * var(--fontsize));
         margin: 0;
         margin-top: calc(var(--contentWidth) * 0.05);
         padding-bottom: calc(var(--contentWidth) * 0.05);
