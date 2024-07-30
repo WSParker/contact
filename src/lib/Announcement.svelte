@@ -24,9 +24,13 @@
         text-align: center;
         position: absolute;
         left: 4%;
-        top: 42%;
-        width: calc(var(--contentWidth) * 0.18);
-        height: calc(var(--contentWidth) * 0.18);
+        top: 41%;
+        /* width: calc(var(--contentWidth) * 0.18); */
+        /* height: calc(var(--contentWidth) * 0.18); */
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 0.45rem;
+        color: black;
         border-radius: 50%;
         display: flex;
         justify-content: center;

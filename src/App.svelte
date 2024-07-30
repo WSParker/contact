@@ -26,6 +26,9 @@
     --headerColor: {headerColor}; --backgroundColor: {backgroundColor}; --numPerLine: 1;"
 >
     <div id="content" style="--base-color: {lowerColor}">
+        <Announcement href="https://arxiv.org/abs/2407.19085"
+            >1/2-Int. <br />Hopfions <br />Preprint</Announcement
+        >
         <div id="header">
             <img
                 id="headshot"
