@@ -37,11 +37,11 @@
                 src={IMG_0280}
                 alt="WSParker headshot"
             />
-            <p id="myName">William Parker</p>
-            <p id="myTitle">Physics PhD Candidate</p>
-            <p id="myOrganization">University of Oregon</p>
+            <p id="myName">William Parker, PhD</p>
+            <p id="myTitle">Recent Physics PhD graduate of <br/> University of Oregon.</p>
+            <!-- <p id="myOrganization">University of Oregon</p> -->
             <p id="myEmail">
-                <a href="mailto:wparker@uoregon.edu">wparker4@uoregon.edu</a>
+                <a href="mailto:will.parker0@gmail.com">will.parker0@gmail.com</a>
             </p>
             <div class="elementRow" style="--numPerLine: 2;">
                 <Link href={WParker_CV} width="{linkWidth2}%">

@@ -10,4 +10,11 @@ export default defineConfig({
             globPatterns: ['**/*.{js,html,css,svg,ico,pdf}']
         }
     })],
+    build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: `assets/[name].[ext]`
+      }
+    }
+  }
 });
