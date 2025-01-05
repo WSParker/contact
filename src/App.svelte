@@ -1,20 +1,19 @@
 <script>
-    import Announcement from "./lib/Announcement.svelte";
     import Link from "./lib/Link.svelte";
-    const WParker_CV = new URL("./lib/assets/WParker_CV.pdf", import.meta.url);
+    const WParker_CV = new URL("./lib/WParker_CV.pdf", import.meta.url);
     const WParker_Resume = new URL(
-        "./lib/assets/WParker_Resume.pdf",
+        "./lib/WParker_Resume.pdf",
         import.meta.url,
     );
-    const IMG_0280 = new URL("./lib/assets/IMG_0280.jpeg", import.meta.url)
+    const IMG_0280 = new URL("./lib/DSC_4721_bust.jpeg", import.meta.url)
         .href;
     let iH, iW;
     $: contentWidth = Math.min(500, iW);
     let linkWidth1 = 92; // (100 - 4 * (numPerLine + 1)) / numPerLine
     let linkWidth2 = 44;
-    const lowerColor = "#ebf5ee";
-    const headerColor = "#283044";
-    const backgroundColor = "#78a1bb";
+    const backgroundColor = "hsl(223, 18%, 92%)";
+    const lowerColor = "hsl(223, 18%, 92%)";
+    const headerColor = "hsl(223, 18%, 92%)";
     document.body.style.backgroundColor = backgroundColor;
 </script>
 
@@ -103,43 +102,52 @@
     #myEmail {
         margin-top: 0%;
         margin-bottom: 1.5%;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
+        font-weight: 300;
     }
     #myTitle,
     #myOrganization {
         margin-top: 0;
         margin-bottom: 1%;
         font-size: 0.5rem;
+        font-weight: 300;
     }
     #myName {
         margin-top: 1%;
         margin-bottom: 1%;
         font-size: 1rem;
+        font-weight: 800;
     }
     #headshot {
         background-color: var(--backgroundColor);
-        border: 6px solid white;
+        border: 4px solid black;
         border-radius: 50%;
         justify-self: center;
         margin-top: 5%;
     }
     #header {
-        background: linear-gradient(
+        /* background: linear-gradient(
             180deg,
             var(--headerColor) calc(0.42 * var(--contentWidth)),
             var(--lowerColor) 20px
-        );
+        ); */
         width: 100%;
-        color: black;
         height: fit-content;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 8px;
     }
     #content {
         padding: 0;
-        border: 1px solid black;
+        border-right: 10px solid;
+        border-left: 10px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(to bottom, var(--base-color), rgb(31, 31, 31), var(--base-color));
+        background-color: var(--base-color);
+        /* border-right: 1px solid #9CDCFE; */
 
         width: calc(var(--contentWidth) * 0.9);
         display: flex;
@@ -158,6 +166,6 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: var(--backgroundColor);
+        border-radius: 8px;
     }
 </style>

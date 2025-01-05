@@ -4,7 +4,8 @@ html {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(31, 31, 31);
     margin: 0px;
     padding: 0px;
     width: 100%;
