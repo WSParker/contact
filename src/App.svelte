@@ -81,7 +81,7 @@
                 </Link>
             </div>
             <!-- <div class="elementRow">
-                <Link href="https://wsparker.github.io/WParker_Dissertation.pdf" width="{linkWidth1}%">
+                <Link href={WParker_Dissertation} width="{linkWidth1}%">
                     <p class="hrefContent">Dissertation</p>
                 </Link>
             </div> -->
@@ -108,8 +108,7 @@
         font-size: 0.5rem;
         font-weight: 300;
     }
-    #myTitle,
-    #myOrganization {
+    #myTitle {
         margin-top: 0;
         margin-bottom: 1%;
         font-size: 0.5rem;
@@ -129,11 +128,6 @@
         margin-top: 5%;
     }
     #header {
-        /* background: linear-gradient(
-            180deg,
-            var(--headerColor) calc(0.42 * var(--contentWidth)),
-            var(--lowerColor) 20px
-        ); */
         width: 100%;
         height: fit-content;
         text-align: center;
