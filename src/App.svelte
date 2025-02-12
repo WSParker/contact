@@ -2,7 +2,7 @@
     import Link from "./lib/Link.svelte";
     const WParker_CV = new URL("./lib/WParker_CV.pdf", import.meta.url);
     const WParker_Resume = new URL("./lib/WParker_Resume.pdf", import.meta.url);
-    const WParker_Dissertation = new URL("./lib/WParker_Dissertation.pdf", import.meta.url);
+    // const WParker_Dissertation = new URL("./lib/WParker_Dissertation.pdf", import.meta.url);
     const IMG_0280 = new URL("./lib/DSC_4721_bust.jpeg", import.meta.url)
         .href;
     let iH, iW;
@@ -80,11 +80,11 @@
                     <p class="hrefContent">ORCiD</p>
                 </Link>
             </div>
-            <div class="elementRow">
-                <Link href={WParker_Dissertation} width="{linkWidth1}%">
+            <!-- <div class="elementRow">
+                <Link href="https://wsparker.github.io/WParker_Dissertation.pdf" width="{linkWidth1}%">
                     <p class="hrefContent">Dissertation</p>
                 </Link>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
